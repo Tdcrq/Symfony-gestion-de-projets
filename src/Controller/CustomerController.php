@@ -16,11 +16,12 @@ class CustomerController extends AbstractController
         ]);
     }
 
-    #[Route('/customer/{slug}', name: 'app_customer_update')]
-    public function customer_update(): Response
+    #[Route('/customer/{slug}', methods: ["GET"], name: 'app_customer_update')]
+    public function customer_update(string $slug): Response
     {
         return $this->render('customer/index.html.twig', [
             'controller_name' => 'customerController',
+            'slug' => $slug,
         ]);
     }
 }
