@@ -1,9 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <!-- ICON -->
+        <script src="https://kit.fontawesome.com/96626c594d.js" crossorigin="anonymous"></script>
+        <!-- CSS -->
+        <link rel="stylesheet" href="public/css/colors.css">
+        <link rel="stylesheet" href="public/css/app.css">
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
@@ -14,6 +19,37 @@
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <nav>
+            <img class="logo" src="public/image/logo-mentalworks-blanc.png" alt="ERROR">
+            <i class="nav-icon fa-solid fa-bars"></i>
+        </nav>
+
+        <main>
+            <section class="left-section">
+                <div class="layouts">
+                    <div class="layout dashboard">
+                        <i class="fa-sharp fa-solid fa-house-chimney"></i>
+                        TABLEAU DE BORD
+                    </div>
+
+                    <div class="layout project">
+                        <i class="fa-solid fa-circle-user"></i>
+                        PROJETS
+                    </div>
+
+                    <div class="layout clients">
+                        <i class="fa-solid fa-book"></i>
+                        CLIENTS
+                    </div>
+
+                    <div class="layout heberg">
+                        <i class="fa-regular fa-square-check"></i>
+                        HÉBERGEURS
+                    </div>
+                </div>
+            </section>
+            {% block right_section %}
+            {% endblock %}
+        </main>
     </body>
 </html>
