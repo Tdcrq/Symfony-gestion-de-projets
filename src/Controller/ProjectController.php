@@ -16,7 +16,7 @@ class ProjectController extends AbstractController
         ]);
     }
 
-    #[Route('/project/{slug}', name: 'app_project_update')]
+    #[Route('/project/{slug}', methods: ["GET"], name: 'app_project_update')]
     public function project_update(): Response
     {
         return $this->render('project/index.html.twig', [

@@ -7,8 +7,9 @@
         <!-- ICON -->
         <script src="https://kit.fontawesome.com/96626c594d.js" crossorigin="anonymous"></script>
         <!-- CSS -->
-        <link rel="stylesheet" href="public/css/colors.css">
-        <link rel="stylesheet" href="public/css/app.css">
+        <link rel="stylesheet" href="{{ asset('styles/app.css') }}">
+        <link rel="stylesheet" href="{{ asset('styles/colors.css') }}">
+        
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
@@ -20,29 +21,29 @@
     </head>
     <body>
         <nav>
-            <img class="logo" src="public/image/logo-mentalworks-blanc.png" alt="ERROR">
+            <img class="logo" src="{{ asset('image/logo-mentalworks-blanc.png') }}" alt="ERROR">
             <i class="nav-icon fa-solid fa-bars"></i>
         </nav>
 
         <main>
             <section class="left-section">
                 <div class="layouts">
-                    <div class="layout dashboard">
+                    <div class="layout dashboard" onclick="location.href='http://localhost:8000/'">
                         <i class="fa-sharp fa-solid fa-house-chimney"></i>
                         TABLEAU DE BORD
                     </div>
 
-                    <div class="layout project">
+                    <div class="layout project" onclick="location.href='http://localhost:8000/project/'">
                         <i class="fa-solid fa-circle-user"></i>
                         PROJETS
                     </div>
 
-                    <div class="layout clients">
+                    <div class="layout clients" onclick="location.href='http://localhost:8000/customer/'">
                         <i class="fa-solid fa-book"></i>
                         CLIENTS
                     </div>
 
-                    <div class="layout heberg">
+                    <div class="layout heberg" onclick="location.href='http://localhost:8000/host/'">
                         <i class="fa-regular fa-square-check"></i>
                         HÉBERGEURS
                     </div>

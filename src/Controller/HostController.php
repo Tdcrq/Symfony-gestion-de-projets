@@ -16,7 +16,7 @@ class HostController extends AbstractController
         ]);
     }
 
-    #[Route('/host/{slug}', name: 'app_host_update')]
+    #[Route('/host/{slug}', methods: ["GET"], name: 'app_host_update')]
     public function host_update(): Response
     {
         return $this->render('host/index.html.twig', [
