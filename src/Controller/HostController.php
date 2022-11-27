@@ -6,7 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class hostController extends AbstractController
+class HostController extends AbstractController
 {
     #[Route('/host', name: 'app_host_insert')]
     public function host_insert(): Response
